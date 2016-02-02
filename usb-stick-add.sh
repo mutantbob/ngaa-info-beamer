@@ -9,7 +9,7 @@ if [ -d $DIR ]; then
     skill loop-video.sh
     skill omxplayer
 
-    INFOBEAMER_BLANK_MODE=layer $HOME/vendor/info-beamer-pi/info-beamer $DIR
+    INFOBEAMER_BLANK_MODE=layer $HOME/info-beamer-pi/info-beamer $DIR
 else
     echo "USB media has no ngaa/ subdirectory"
 fi
