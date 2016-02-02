@@ -38,7 +38,7 @@ install -v -o pi -m 0755	usb-stick-add.sh usb-stick-remove.sh $target/home/pi/bi
 install -v -o root -m 0755 -d	$target/root/bin $target/mnt/x
 install -v -o root -m 0755	root/usb-stick-add.sh root/usb-stick-remove.sh $target/root/bin/
 
-(grep -v "^gpu_mem" $target/boot/config.txt ; echo "#infobeamer needs gpu_mem "; echo "gpu_mem=192") > $target/boot/config.txt.new &&
+(egrep -v "^(gpu_mem|.*infobeamer needs gpu_mem)" $target/boot/config.txt ; echo "#infobeamer needs gpu_mem "; echo "gpu_mem=192") > $target/boot/config.txt.new &&
 mv $target/boot/config.txt.new $target/boot/config.txt
 
 udevadm control --reload
