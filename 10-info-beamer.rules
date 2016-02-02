@@ -1,0 +1,3 @@
+ACTION=="add", KERNEL=="sd*1", SUBSYSTEM=="block", RUN+="/root/bin/usb-stick-add.sh %k "
+ACTION=="remove", KERNEL=="sd*1", SUBSYSTEM=="block", RUN+="/root/bin/usb-stick-remove.sh %k "
+
