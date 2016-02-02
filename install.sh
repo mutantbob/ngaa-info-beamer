@@ -31,6 +31,8 @@ fi
 
 
 install -v -o root -m 0644	10-info-beamer.rules $target/etc/udev/rules.d/
+install -v -o root -m 0644	slideshow\@.service $target/etc/systemd/system/slideshow\@.service
+
 install -v -o pi -m 0755 -d	$target/home/pi/bin
 install -v -o pi -m 0755	usb-stick-add.sh usb-stick-remove.sh $target/home/pi/bin/
 install -v -o root -m 0755 -d	$target/root/bin $target/mnt/x
@@ -38,3 +40,5 @@ install -v -o root -m 0755	root/usb-stick-add.sh root/usb-stick-remove.sh $targe
 
 (grep -v "^gpu_mem" $target/boot/config.txt ; echo "#infobeamer needs gpu_mem "; echo "gpu_mem=192") > $target/boot/config.txt.new &&
 mv $target/boot/config.txt.new $target/boot/config.txt
+
+udevadm control --reload

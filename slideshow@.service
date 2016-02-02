@@ -1,0 +1,7 @@
+[Unit]
+Description = info beamer slide show
+BindsTo=dev-%i.device
+
+[Service]
+Type=simple
+ExecStart = /root/bin/usb-stick-add.sh %I

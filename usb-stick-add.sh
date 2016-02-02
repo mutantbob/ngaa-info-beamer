@@ -2,7 +2,6 @@
 
 #exec > /dev/pts/3 2>&1
 
-
 DIR=/mnt/x/ngaa
 if [ -d $DIR ]; then
 
