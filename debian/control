@@ -1,0 +1,6 @@
+Package: autoplug-video-loop
+Version: 0.1
+Maintainer: Robert Forsman
+Architecture: all
+Depends: omxplayer
+Description: This installs a udev rule, systemd service description, and shell scripts which check any inserted usb stick for a file ngaa/loop.mp4.  When one is found omxplayer is invoked to loop the video onto the attached display.

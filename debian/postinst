@@ -1,0 +1,13 @@
+#!/bin/sh
+
+chown pi /home/pi/bin/usb-stick-add.sh /home/pi/bin/usb-stick-remove.sh
+
+chown root.root /etc/systemd/system/slideshow@.service \
+      /etc/udev/rules.d/10-slideshow.rules \
+      /root/bin/usb-stick-add.sh \
+      /root/bin/usb-stick-remove.sh \
+      /home/pi/bin/usb-stick-add.sh \
+      /home/pi/bin/usb-stick-remove.sh \
+      /mnt/x
+
+exit 0
