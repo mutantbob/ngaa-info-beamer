@@ -5,3 +5,4 @@ BindsTo=dev-%i.device
 [Service]
 Type=simple
 ExecStart = /root/bin/usb-stick-add.sh %I
+ExecStop = /root/bin/usb-stick-remove.sh %I
