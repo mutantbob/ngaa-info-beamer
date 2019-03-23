@@ -1,0 +1,2 @@
+ACTION=="add", KERNEL=="sd*1", SUBSYSTEM=="block", RUN+="/bin/systemctl --no-block start slideshow@%k.service"
+ACTION=="remove", KERNEL=="sd*1", SUBSYSTEM=="block", RUN+="/bin/systemctl --no-block stop slideshow@%k.service"
